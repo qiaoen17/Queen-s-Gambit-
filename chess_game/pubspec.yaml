@@ -1,4 +1,4 @@
-name: chess
+name: chess_game
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -27,8 +27,10 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  flutter:
+  flutter: 
     sdk: flutter
+  chess: any
+  flutter_stateless_chessboard: ^1.1.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -37,6 +39,8 @@ dependencies:
 
 dev_dependencies:
   flutter_test:
+    sdk: flutter
+  integration_test:
     sdk: flutter
 
   # The "flutter_lints" package below contains a set of recommended lints to
