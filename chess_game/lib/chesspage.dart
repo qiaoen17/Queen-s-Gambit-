@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:chess_game/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stateless_chessboard/flutter_stateless_chessboard.dart';
 
@@ -96,13 +97,23 @@ class chessPageState extends State<chessPage> {
                 fen = nextFen;
               });
 
-              Future.delayed(Duration(milliseconds: 300)).then((_) {
+              Future.delayed(const Duration(milliseconds: 100)).then((_) {
                 final computerMove = getRandomMove(fen);
                 final computerFen = makeMove(fen, computerMove);
 
                 if (computerMove != null && computerFen != null) {
                   setState(() {
                     fen = computerFen;
+                  });
+                }
+
+                if (computerMove == null) {
+                  setState(() {
+                    fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                );
                   });
                 }
               });

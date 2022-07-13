@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'chesspage.dart';
+import 'ChessPage.dart';
 import 'HomePage.dart';
 
 void main() {

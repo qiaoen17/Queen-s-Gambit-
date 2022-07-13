@@ -1,7 +1,7 @@
-import 'package:chess_game/chesspage.dart';
+import 'package:chess_game/ChessPage.dart';
 import 'package:flutter/material.dart';
 
-import 'chesspage.dart';
+import 'ChessPage.dart';
 
 class HomePage extends StatelessWidget {
 
@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Queen's Gambit"),
       ),
-      body: Center(
+      body: SafeArea(
         child: ElevatedButton(
           child: const Text('Start Game'),
           onPressed: () {
@@ -25,6 +25,7 @@ class HomePage extends StatelessWidget {
           },
           ),
         ),
+
     );
   }
 }
