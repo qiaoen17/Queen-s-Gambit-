@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'ChessPage.dart';
 import 'HomePage.dart';
 
 void main() {
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.brown,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }

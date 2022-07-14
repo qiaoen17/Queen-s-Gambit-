@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Queen's Gambit"),
       ),
-      body: SafeArea(
+      body: Center(
         child: ElevatedButton(
           child: const Text('Start Game'),
           onPressed: () {

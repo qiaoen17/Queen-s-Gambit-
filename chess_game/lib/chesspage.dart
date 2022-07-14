@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:chess_game/HomePage.dart';
+import 'package:chess_game/GameOver.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stateless_chessboard/flutter_stateless_chessboard.dart';
 
@@ -13,6 +13,8 @@ class chessPage extends StatefulWidget {
 }
 
 class chessPageState extends State<chessPage> {
+  // white goes first, KQkq castling available for both white and black
+  // on kingside and queenside, no enpassant, 0 moves, round 1
   String fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
   
   @override
@@ -37,7 +39,7 @@ class chessPageState extends State<chessPage> {
                 color == BoardColor.WHITE ? Colors.brown : Color.fromARGB(255, 206, 148, 127),
             );
           },
-          orientation: BoardColor.BLACK,
+          orientation: BoardColor.WHITE,
           buildPiece: (piece, size) {
             if (piece == Piece.WHITE_PAWN) {
               return Icon(
@@ -112,7 +114,7 @@ class chessPageState extends State<chessPage> {
                     fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
                     Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
+                    MaterialPageRoute(builder: (context) => const GameOver()),
                 );
                   });
                 }
