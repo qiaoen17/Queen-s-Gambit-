@@ -8,6 +8,7 @@
 
 ## Features 
 - [x] Basic chess game 
+- [ ] login and sign up page(to be implemented by 13 Jan)
 - [ ] multiplayer 
 - [ ] Ui completed 
 
